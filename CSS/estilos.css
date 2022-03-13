@@ -11,66 +11,79 @@ body{
 }
 
 
-.header{
+/* INICIO */
+
+header{
     background-color: bisque;
     height: 10rem;
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
+    display: flex;
+    justify-content: space-between;
 }
-
-.monograma{
-    font-family:'cinzel',serif;
-    font-size: 16px;
-    float: left;
-    position: relative;
-    margin-left: 5%;
-    line-height: 20px;
-    text-align: center;
-    top: 40%;
-}
-
 nav ul {
     list-style: none;
 }
  nav ul li {
      display: inline-block;
-     padding: 25px;
+     padding:25px;
+    
+     }
+ul  { 
+    height: 10rem;
+    display: flex;
+    
 }
 
-.navegador{
-    height: 100px;
-    width: 500px;
-    float: right;
-    line-height: 100px;
-    
+li{ margin-top: 10%;
    
-} 
+ }
 
-.enlaceHeader{ 
-    text-decoration: none;
-    color:black;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.enlaceHeader:hover{
-    color:grey;
-    text-decoration: none;
-}
-
-.enlaceHeader2{
-    text-decoration: none;
-    color:black;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 30px;
+ .enlaceHeader{ 
+        text-decoration: none;
+        color:black;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 15px;
+        margin-top: 20%;
+        
+    }
     
-}
+ .enlaceHeader:hover{
+        color:grey;
+        text-decoration: none;
+    }
 
-.enlaceHeader2:hover{
-    color:grey;
-    text-decoration: none;
+    @media (max-width:600px) and (orientation:portrait) {
+       ul {
+            font-size: 10px;
+            flex-direction: column;
+        }
+        .enlaceHeader {
+            font-size: 10px;
+        }
+        nav ul li {
+            padding: 0%;
+            
+        }
+        li {
+            margin-top:30%;
+            list-style-position: inside;
+            
+        }
+    }
+    
+#monograma{
+    font-family:'cinzel',serif;
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    margin-left: 5%;
+    line-height: 27px;
+    text-align: center;
+    top: 30%;
 }
 
 
@@ -153,7 +166,13 @@ nav ul {
     width: 20%;
 }
 
-
+.baseSecciones{
+    height: 690px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-image: linear-gradient(#ffe4c4 60%, grey);
+   
+}
 
 
 .footer {
@@ -174,9 +193,9 @@ nav ul {
 }
 
 
-.field2place{ 
-    float: right;
-}
+
+/*SECCION CONTACTO*/
+
 
 .titulosint{
     font-family: 'montserrat subrayada', sans-serif ;
@@ -189,19 +208,62 @@ nav ul {
     margin-left: 2%;
     margin-right: 2%;
     background-image: linear-gradient(#ffe4c4 60%, grey);
+   
 }
+
+.baseSecciones1{
+    height: 690px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-image: linear-gradient(#ffe4c4 60%, grey);
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width:600px) and (orientation:portrait) {
+    .baseSecciones1{
+        flex-direction: column;
+    }
+}
+
 
 .contenedorContacto{ 
     height: 690px;
     margin-left: 2%;
     margin-right: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     font-size: 15px;
 }
+.input1{
+    background-color: transparent;
+    font-family: 'montserrat';
+    border: solid 0.5px;
 
+}
+
+.input2{
+    background-color: black;
+    padding: 10px;
+    color: bisque;
+    font-family: 'montserrat';
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+.input2:hover {
+    background-color: bisque;
+    color: black;
+
+}
+
+
+/* Profe! con esta serie de !important lo que quise hacer es pisar Bootstrap. Intenté con ID, con doble clase, modificando desde Sass y no lo logré con nada. Sé que no es correcto, pero no encontré otra forma - Y en base a esto, tuve que hacer los @media con la misma categoria de importantes :( 
+    
+
+Contienen Carousel: SECCIONES EDITORIAL-GRAFICO-WEB-FOTO
+
+*/
+
+/* FOTO*/
 
 .carouselItem2{
     height: 650px !important;
@@ -210,40 +272,39 @@ nav ul {
     filter: sepia(30%) !important;
 }
 
-.carouselItem3{
-    height: 650px !important;
-    width: 450px !important;
-    margin-left: 460px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem4{
-    height: 650px !important;
-    width: 450px !important;
-    margin-left: 460px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem1:hover{
-    filter: none !important;
-
-}
-
-
 .carouselItem2:hover{
     filter: none !important;
 
 }
 
-.carouselItem3:hover{
-    filter: none !important;
 
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem2 {
+        height: 450px !important;
+        width:350px !important;
+        margin-left: 90px !important;
+        margin-top: 40px !important;
+        filter: sepia(30%) !important;
+    }
 }
 
-.carouselItem4:hover{
-    filter: none !important;
 
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem2 {
+        height: 550px !important;
+        width:430px !important;
+        margin-left: 120px !important;
+        margin-top: 60px !important;
+        filter: sepia(30%) !important;
+    }
 }
+
+
+.carouselItem2:hover{
+    filter: none !important;
+}
+
+/* EDITORIAL*/
 
 .carouselItem5{
     height: 650px !important;
@@ -255,6 +316,27 @@ nav ul {
 .carouselItem5:hover{
     filter: none !important;
 
+}
+
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem5 {
+        height: 450px !important;
+        width:330px !important;
+        margin-left: 80px !important;
+        margin-top: 40px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem5 {
+        height: 550px !important;
+        width:410px !important;
+        margin-left: 120px !important;
+        margin-top: 60px !important;
+        filter: sepia(30%) !important;
+    }
 }
 
 .carouselItem6{
@@ -270,111 +352,31 @@ nav ul {
 
 }
 
-.carouselItem7{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem6 {
+        height: 250px !important;
+        width:350px !important;
+        margin-left: 65px !important;
+        margin-top: 70px !important;
+        filter: sepia(30%) !important;
+    }
 }
 
-.carouselItem7:hover{
-    filter: none !important;
 
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem6 {
+        height: 400px !important;
+        width:560px !important;
+        margin-left: 45px !important;
+        margin-top: 60px !important;
+        filter: sepia(30%) !important;
+    }
 }
 
-.carouselItem8{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem8:hover{
-    filter: none !important;
-
-}
-
-.carouselItem9{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem9:hover{
-    filter: none !important;
-
-}
-
-.carouselItem10{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem10:hover{
-    filter: none !important;
-
-}
-
-.carouselItem11{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem11:hover{
-    filter: none !important;
-
-}
-
-.carouselItem12{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem12:hover{
-    filter: none !important;
-
-}
-
-.carouselItem13{
-    height: 550px !important;
-    width: 750px !important;
-    margin-left: 330px !important;
-    margin-top: 70px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem13:hover{
-    filter: none !important;
-}
-
-.carouselItem14{
-    height: 650px !important;
-    width: 450px !important;
-    margin-left: 460px !important;
-    filter: sepia(30%) !important;
-}
-
-.carouselItem14:hover{
-    filter: none !important;
-
-}
-
+/* GRAFICO */
 .carouselItem15{
     height: 650px !important;
-    width: 450px !important;
+    width: 470px !important;
     margin-left: 460px !important;
     filter: sepia(30%) !important;
 }
@@ -383,16 +385,27 @@ nav ul {
 
 }
 
-.carouselItem16{
-    height: 650px !important;
-    width: 450px !important;
-    margin-left: 460px !important;
-    filter: sepia(30%) !important;
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem15 {
+        height: 500px !important;
+        width:350px !important;
+        margin-left: 65px !important;
+        margin-top: 90px !important;
+        filter: sepia(30%) !important;
+    }
 }
-.carouselItem16:hover{
-    filter: none !important;
 
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem15 {
+        height: 600px !important;
+        width:450px !important;
+        margin-left: 95px !important;
+        margin-top: 60px !important;
+        filter: sepia(30%) !important;
+    }
 }
+
 
 .carouselItem17{
     height: 400px !important;
@@ -405,6 +418,31 @@ nav ul {
     filter: none !important;
 }
 
+
+
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem17 {
+        height: 250px !important;
+        width:350px !important;
+        margin-left: 65px !important;
+        margin-top: 150px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem17 {
+        height: 400px !important;
+        width:550px !important;
+        margin-left: 45px !important;
+        margin-top: 85px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+
+
 .carouselItem18{
     height: 400px !important;
     width: 400px !important;
@@ -416,6 +454,26 @@ nav ul {
     filter: none !important;
 }
 
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem18 {
+        height: 250px !important;
+        width:280px !important;
+        margin-left: 100px !important;
+        margin-top: 180px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem18 {
+        height: 350px !important;
+        width:380px !important;
+        margin-left:150px !important;
+        margin-top: 135px !important;
+        filter: sepia(30%) !important;
+    }
+}
 
 .carouselItem19{
     height: 300px !important;
@@ -428,16 +486,28 @@ nav ul {
     filter: none !important;
 }
 
-.carouselItem20{
-    height: 650px !important;
-    width: 450px !important;
-    margin-left: 460px !important;
-    filter: sepia(30%) !important;
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem19 {
+        height: 100px !important;
+        width:270px !important;
+        margin-left: 100px !important;
+        margin-top: 200px !important;
+        filter: sepia(30%) !important;
+    }
 }
-.carouselItem20:hover{
-    filter: none !important;
 
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem19 {
+        height: 155px !important;
+        width:380px !important;
+        margin-left:130px !important;
+        margin-top: 200px !important;
+        filter: sepia(30%) !important;
+    }
 }
+
+/* WEB*/
 
 .carouselItem21{
     height: 500px !important;
@@ -450,58 +520,27 @@ nav ul {
     filter: none !important;
 }
 
-.carouselItem22{
-    height: 500px !important;
-    width: 1000px !important;
-    margin-left: 180px !important;
-    margin-top: 90px !important ;
-    filter: sepia(30%) !important;
-}
-.carouselItem22:hover{
-    filter: none !important;
-}
-
-.carouselItem23{
-    height: 500px !important;
-    width: 1000px !important;
-    margin-left: 180px !important;
-    margin-top: 90px !important ;
-    filter: sepia(30%) !important;
-}
-.carouselItem23:hover{
-    filter: none !important;
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem21 {
+        height: 200px !important;
+        width:350px !important;
+        margin-left: 95px !important;
+        margin-top: 110px !important;
+        filter: sepia(30%) !important;
+    }
 }
 
-.carouselItem24{
-    height: 500px !important;
-    width: 1000px !important;
-    margin-left: 180px !important;
-    margin-top: 90px !important ;
-    filter: sepia(30%) !important;
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem21 {
+        height: 300px !important;
+        width: 600px !important;
+        margin-left: 18px !important;
+        margin-top: 130px !important;
+        filter: sepia(30%) !important;
+    }
 }
-.carouselItem24:hover{
-    filter: none !important;
-}
-.carouselItem25{
-    height: 500px !important;
-    width: 1000px !important;
-    margin-left: 180px !important;
-    margin-top: 90px !important ;
-    filter: sepia(30%) !important;
-}
-.carouselItem25:hover{
-    filter: none !important;
-}
-.carouselItem26{
-    height: 500px !important;
-    width: 1000px !important;
-    margin-left: 180px !important;
-    margin-top: 90px !important ;
-    filter: sepia(30%) !important;
-}
-.carouselItem26:hover{
-    filter: none !important;
-}
+
+
 
 .carouselItem27{
     height: 650px !important;
@@ -513,16 +552,28 @@ nav ul {
 .carouselItem27:hover{
     filter: none !important;
 }
-.carouselItem28{
-    height: 650px !important;
-    width: 1000px !important;
-    margin-left: 180px !important;
-    margin-top: 30px !important ;
-    filter: sepia(30%) !important;
+
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem27 {
+        height: 300px !important;
+        width:450px !important;
+        margin-left: 15px !important;
+        margin-top: 90px !important;
+        filter: sepia(30%) !important;
+    }
 }
-.carouselItem28:hover{
-    filter: none !important;
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem27 {
+        height: 400px !important;
+        width: 600px !important;
+        margin-left: 18px !important;
+        margin-top: 90px !important;
+        filter: sepia(30%) !important;
+    }
 }
+
+
 
 .carouselItem29{
     height: 650px !important;
@@ -534,6 +585,28 @@ nav ul {
 .carouselItem29:hover{
     filter: none !important;
 }
+
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem29 {
+        height: 450px !important;
+        width:200px !important;
+        margin-left: 140px !important;
+        margin-top: 40px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem29 {
+        height: 550px !important;
+        width: 230px !important;
+        margin-left: 200px !important;
+        margin-top: 20px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+
 .carouselItem30{
     height: 500px !important;
     width: 650px !important;
@@ -545,10 +618,33 @@ nav ul {
     filter: none !important;
 }
 
+@media (max-width:600px) and (orientation:portrait) {
+    .carouselItem30 {
+        height: 300px !important;
+        width:350px !important;
+        margin-left: 65px !important;
+        margin-top: 80px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+@media (min-width:601px) and (orientation:portrait) {
+    .carouselItem30 {
+        height: 370px !important;
+        width: 450px !important;
+        margin-left: 100px !important;
+        margin-top: 90px !important;
+        filter: sepia(30%) !important;
+    }
+}
+
+
+/* SECCION SOBRE MI */
 
 .contenedorMi{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
    
 }
 
@@ -564,6 +660,19 @@ nav ul {
     align-items: center;
 }
 
+@media (max-width:600px) and (orientation:portrait) {
+    .yo .pYo {
+       font-size: 10px;
+       width: 200px;
+    }
+}
+
+@media (min-width:601px) and (orientation:portrait) {
+    .yo .pYo {
+       font-size: 13px;
+       width: 200px;
+    }
+}
 
 .fotoYo {
     background-color: aqua;
@@ -576,7 +685,7 @@ nav ul {
     background-size: cover;
     filter: sepia(30%);
     animation-name: aparecer;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-direction:alternate-reverse;
     border-radius: 50%;
     border: solid black 4px;
@@ -599,5 +708,98 @@ nav ul {
     filter: none;
 }
 
+@media (max-width:600px) and (orientation:portrait) {
+    .fotoYo {
+    height: 200px;
+    width: 300px;
+    margin-top: 200px;
+    margin-right: 50px;
+    
+    }
+}
 
+@media (min-width:601px) and (orientation:portrait) {
+    .fotoYo {
+    height: 300px;
+    width: 250px;
+    margin-top: 200px;
+    margin-right: 50px;
+    
+    }
+}
+
+
+.hola { 
+    font-family: 'montserrat subrayada';
+    position: absolute;
+    font-size: 30px;
+    margin-top: 130px;
+    margin-left: 180px;
+}
+
+@media (max-width:600px) and (orientation:portrait) {
+    .hola {
+      margin-top: 100px;
+    }
+}
+
+@media (min-width:601px) and (orientation:portrait) {
+    .hola {
+      margin-top: 90px;
+    }
+}
+
+
+.estrella {
+    background-image: url(../MULTMEDIA/Estrella\ _Mesa\ de\ trabajo\ 1.png);
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin-top: 480px;
+    animation-name: blackstar;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+ @keyframes blackstar {
+     0% { opacity: 0;
+        /*transform: rotateZ(45deg);*/
+     }
+     50% {opacity: 0.5;
+        /*transform: rotateZ(90deg);*/
+        
+     }
+     100% { opacity: 1;
+        transform: rotateZ(360deg);
+     }
+ }
+
+ @media (min-width:601px) and (orientation:portrait) {
+    .estrella {
+      margin-top: 550px;
+    }
+}
+
+.input1{
+    background-color: transparent;
+    font-family: 'montserrat';
+    border: solid 0.5px;
+
+}
+
+.input2{
+    background-color: black;
+    padding: 10px;
+    color: bisque;
+    font-family: 'montserrat';
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+.input2:hover {
+    background-color: bisque;
+    color: black;
+
+}
 
